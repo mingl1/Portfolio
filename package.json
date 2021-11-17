@@ -7,7 +7,8 @@
     "build": "next build",
     "prettier": "prettier -write .",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "start": "next start"
   },
   "keywords": [],
   "author": "Ming Lin<m1424590733@gmail.com>",
@@ -21,7 +22,9 @@
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "sharp": "^0.29.3",
+    "uuid": "^7.0.3"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

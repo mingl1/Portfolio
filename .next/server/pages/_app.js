@@ -184,7 +184,7 @@ const NavBar = (props)=>{
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx(LinkItem, {
                             _target: "_blank",
-                            href: "https://github.com/mingl1",
+                            href: "https://github.com/mingl1/portfolio",
                             path: path,
                             display: "inline-flex",
                             alignItems: "center",
