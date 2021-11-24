@@ -1,4 +1,4 @@
 portfolio:
-  component:"@sls-next/serverless-component@1.18.0"
+  component:"@sls-next/serverless-component@3.6.0"
   inputs:
     domain: "minglin.me"
