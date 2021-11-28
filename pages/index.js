@@ -1,23 +1,79 @@
-import { Container,Box, Heading } from "@chakra-ui/layout"
-
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue,Center
+} from '@chakra-ui/react'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
-    return (
-        <Container>
-            <Box borderRadius="lg" bg="green" p={3} mb={6} align="center">
-                Hello, I&apos;m a high school student in NYC.
-            </Box>
+  return (
+    <Container>
+      <Box
+        borderRadius="lg"
+        bg={useColorModeValue('whiteAlpha.800', 'whiteAlpha.200')}
+        p={3}
+        mb={6}
+        align="center"
+      >
+        Hi, I&apos;m a high school student in New York City!
+      </Box>
 
-            <Box display={{md: 'flex'}}>
-                <Box flexGrow={1}>
-                    <Heading as="h2" variant="page-title">
-                        Ming Lin
-                    </Heading>
-                    <p> Senior student, attending <b>The Bronx High School of Science</b></p>
-                </Box>
-            </Box>
-        </Container>
-    )
+      <Box display={{ md: 'flex' }}>
+        <Box flexGrow={1}>
+          <Heading as="h2" variant="page-title">
+            Ming Lin
+          </Heading>
+          <Section delay={0.1}>
+          <Paragraph>
+            Senior student, attending <b>The Bronx High School of Science</b> {' '}(2018-2022)
+          </Paragraph>
+          </Section>
+        </Box>
+
+        <Box
+          flexShrink={0}
+          mt={{ base: 4, md: 0 }}
+          ml={{ md: 6 }}
+          allign="center"
+        >
+            <Center>
+          <Image
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            maxWidth="100px"
+            display="inline-block"
+            borderRadius="full"
+            src="/images/ML_logo1.png"
+            alt="Profile Image"
+          />
+          </Center>
+        </Box>
+        
+      </Box>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>2004</BioYear> Born in FuZhou, China.
+        </BioSection>
+        <BioSection>
+          <BioYear>2012</BioYear> Immigrated to NYC, USA.
+        </BioSection>
+        <BioSection>
+          <BioYear>2018</BioYear> Accepted into The Bronx High School of Science.
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear> TBD.
+        </BioSection>
+      </Section>
+    </Container>
+  )
 }
 
 export default Page

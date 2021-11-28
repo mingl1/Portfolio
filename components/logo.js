@@ -20,22 +20,22 @@ const LogoBox = styled.span`
 `
 // put in navigation image
 const Logo = () => {
-  const flakyImg = `/images/flaky${useColorModeValue('', '-dark')}.png`
+  const flakyImg = `/images/flaky${useColorModeValue('', '')}.png`
 
   return (
     <Link href="/">
       <a>
-        <LogoBox>
-          <Image src={flakyImg} width={20} height={20} alt="logo" />
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c", sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
+          <LogoBox>
+            <Image src={flakyImg} width={20} height={20} alt="logo" />
+            <Text
+              color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+              fontFamily= 'M PLUS Rounded 1c", sans-serif'
+              fontWeight="bold"
+              ml={3}
+            >
             Ming Lin
-          </Text>
-        </LogoBox>
+            </Text>
+          </LogoBox>
       </a>
     </Link>
   )
