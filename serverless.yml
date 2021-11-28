@@ -1,5 +1,2 @@
 portfolio:
-  component:"@sls-next/serverless-component@3.6.0"
-  inputs:
-    domain: "minglin.me"
-    distributionId: 'EZP712TLNRHPA'
+  component: "@sls-next/serverless-component@3.6.0"
