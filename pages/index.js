@@ -8,6 +8,7 @@ import {
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import AddSuspenseComponent from '../components/rand'
 
 const Page = () => {
   return (
@@ -69,7 +70,7 @@ const Page = () => {
           <BioYear>2018</BioYear> Accepted into The Bronx High School of Science.
         </BioSection>
         <BioSection>
-          <BioYear>2022</BioYear> TBD.
+        <BioYear>2022 </BioYear>  <AddSuspenseComponent repeat={true}> T{''}B{''}D{''}.{' '}.{' '}.{' '}.{' '}.{' '}.{' '}.</AddSuspenseComponent>
         </BioSection>
       </Section>
     </Container>
