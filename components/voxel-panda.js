@@ -17,9 +17,9 @@ const VoxelPanda = () => {
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
-      10,
-      20 * Math.cos(0.2 * Math.PI)
+      100 * Math.sin(0.2 * Math.PI),
+      0.1,
+      0.1 * Math.cos(0.2 * Math.PI)
     )
   )
   const [scene] = useState(new THREE.Scene())
@@ -52,12 +52,12 @@ const VoxelPanda = () => {
 
       const scale = scH * 0.005 + 4.8
       const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.01,
-        50000
+        -scale/1.5,
+        scale/1.5,
+        scale/1.5,
+        -scale/1.5,
+        2,
+        100
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -88,7 +88,7 @@ const VoxelPanda = () => {
 
         if (frame <= 100) {
           const p = initialCameraPosition
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 15.5
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 15.7
 
           camera.position.y = 10
           camera.position.x =
