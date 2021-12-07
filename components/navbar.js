@@ -17,20 +17,36 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, children, newTab }) => {
   const active = path === href
+  const newT = newTab
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  return (
-    <NextLink href={href} passHref>
-      <Link
-        p={2}
-        bg={active ? 'glassTeal' : undefined}
-        color={active ? '@202023' : inactiveColor}
-      >
-        {children}
-      </Link>
-    </NextLink>
-  )
+  if (newTab) {
+    return (
+      <NextLink href={href} passHref>
+        <Link
+          p={2}
+          rel="noreferrer noopener"
+          target="_blank"
+          bg={active ? 'glassTeal' : undefined}
+          color={active ? '@202023' : inactiveColor}
+        >
+          {children}
+        </Link>
+      </NextLink>
+    )
+  } else
+    return (
+      <NextLink href={href} passHref>
+        <Link
+          p={2}
+          bg={active ? 'glassTeal' : undefined}
+          color={active ? '@202023' : inactiveColor}
+        >
+          {children}
+        </Link>
+      </NextLink>
+    )
 }
 
 const NavBar = props => {
@@ -60,7 +76,6 @@ const NavBar = props => {
           </Heading>
         </Flex>
 
-      
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
@@ -69,22 +84,18 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/school" path={path}>
+          <LinkItem href="/school" path={path} newTab={false}>
             School Projects
           </LinkItem>
-          <LinkItem href="/personal" path={path}>
+          <LinkItem href="/personal" path={path} newTab={false}>
             Personal Projects
           </LinkItem>
           <LinkItem
-            _target="_blank"
             href="https://github.com/mingl1/portfolio"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
+            newTab={true}
+
+            as={Link}
           >
-           
             Source Code
           </LinkItem>
         </Stack>
@@ -93,7 +104,7 @@ const NavBar = props => {
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy >
+            <Menu isLazy>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
@@ -110,13 +121,18 @@ const NavBar = props => {
                 <NextLink href="/personal" passHref>
                   <MenuItem as={Link}>Personal Work</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/mingl1" target="_blank" rel="noreferrer noopener">
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/mingl1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   Source Code
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-          </Box>
+        </Box>
       </Container>
     </Box>
   )
