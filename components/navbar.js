@@ -19,7 +19,6 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 const LinkItem = ({ href, path, children, newTab }) => {
   const active = path === href
-  const newT = newTab
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   if (newTab) {
     return (
