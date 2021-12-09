@@ -9,7 +9,7 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import AddSuspenseComponent from '../components/rand'
-
+import Age from '../components/age'
 const Page = () => {
   return (
     <Container>
@@ -20,9 +20,9 @@ const Page = () => {
         mb={6}
         align="center"
       >
-        Hi, I&apos;m a high school student in New York City!
+        Hi, I&apos;m a <Age/> year old high school student in New York City!
       </Box>
-
+      {/* translate ming lin into different languages every 1.5 seconds */}
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
