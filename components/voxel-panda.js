@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
-//import { CameraHelper, OrthographicCamera } from 'three'
 import { PandaSpinner, PandaContainer } from './panda-loader'
 
 function easeOutCirc(x) {
@@ -102,6 +101,7 @@ const VoxelPanda = () => {
         renderer.render(scene, camera)
       }
       return () => {
+        console.log('unmount')
         cancelAnimationFrame(req)
         renderer.dispose()
       }
