@@ -1,6 +1,5 @@
 import Logo from './logo'
 import NextLink from 'next/link'
-
 import {
   Container,
   Box,
@@ -17,35 +16,35 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-const LinkItem = ({ href, path, children, newTab }) => {
+const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  if (newTab) {
+
     return (
       <NextLink href={href} passHref>
         <Link
           p={2}
-          rel="noreferrer noopener"
-          target="_blank"
+          _target={_target}
           bg={active ? 'glassTeal' : undefined}
           color={active ? '@202023' : inactiveColor}
+          {...props}
         >
           {children}
         </Link>
       </NextLink>
     )
-  } else
-    return (
-      <NextLink href={href} passHref>
-        <Link
-          p={2}
-          bg={active ? 'glassTeal' : undefined}
-          color={active ? '@202023' : inactiveColor}
-        >
-          {children}
-        </Link>
-      </NextLink>
-    )
+  //  else
+  //   return (
+  //     <NextLink href={href} passHref>
+  //       <Link
+  //         p={2}
+  //         bg={active ? 'glassTeal' : undefined}
+  //         color={active ? '@202023' : inactiveColor}
+  //       >
+  //         {children}
+  //       </Link>
+  //     </NextLink>
+  //   )
 }
 
 const NavBar = props => {
@@ -103,7 +102,7 @@ const NavBar = props => {
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy>
+            <Menu isLazy id="navbar_menu">
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}

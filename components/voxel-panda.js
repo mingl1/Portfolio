@@ -116,9 +116,7 @@ const VoxelPanda = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <PandaContainer ref={refContainer}>
-      {loading && <PandaSpinner />}
-    </PandaContainer>
+    <PandaContainer ref={refContainer}>{loading && <PandaSpinner />}</PandaContainer>
   )
 }
 
