@@ -4,3 +4,4 @@
 .env
 .next
 node_modules
+.vscode
