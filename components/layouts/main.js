@@ -19,7 +19,8 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Homepage" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta property="og:image" content="/ML_logo1.png" />
+        <meta property="og:image" content="/images/unknown.png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
         <title>WIP: Just Ming</title>
       </Head>
