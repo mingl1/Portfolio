@@ -10,6 +10,10 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import AddSuspenseComponent from '../components/rand'
 import Age from '../components/age'
+import { LinkItem } from '../components/navbar'
+
+
+
 const Page = () => {
   return (
     <Container>
@@ -67,12 +71,10 @@ const Page = () => {
           <BioYear>2012</BioYear> Immigrated to NYC, USA.
         </BioSection>
         <BioSection>
-          <BioYear>2018</BioYear>       Accepted into  <a
-            href="https://en.wikipedia.org/wiki/Bronx_High_School_of_Science"
-            target="_blank"
-            rel="noreferrer noopener"
-          ><u>The Bronx High School of Science</u>.
-          </a>
+          <BioYear>2018</BioYear> Accepted into<LinkItem href="https://en.wikipedia.org/wiki/Bronx_High_School_of_Science"
+            >The Bronx High School of Science.</LinkItem>
+            
+         
         </BioSection>
         <BioSection>
         <BioYear>2022 </BioYear>  <AddSuspenseComponent repeat={true}> T{''}B{''}D{''}.{' '}.{' '}.{' '}.{' '}.{' '}.{' '}.</AddSuspenseComponent>
