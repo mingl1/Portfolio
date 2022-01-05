@@ -3,7 +3,8 @@ import {
   Box,
   Heading,
   Image,
-  useColorModeValue,Center
+  useColorModeValue,
+  Center
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -20,7 +21,7 @@ const Page = () => {
         mb={6}
         align="center"
       >
-        Hi, I&apos;m a <Age/> year old high school student in New York City!
+        Hi, I&apos;m a <Age /> year old high school student in New York City!
       </Box>
       {/* translate ming lin into different languages every 1.5 seconds */}
       <Box display={{ md: 'flex' }}>
@@ -29,9 +30,10 @@ const Page = () => {
             Ming Lin
           </Heading>
           <Section delay={0.1}>
-          <Paragraph>
-            Senior student, attending <b>The Bronx High School of Science</b> {' '}(2018-2022)
-          </Paragraph>
+            <Paragraph>
+              Senior student, attending <b>The Bronx High School of Science</b>{' '}
+              (2018-2022)
+            </Paragraph>
           </Section>
         </Box>
 
@@ -41,20 +43,19 @@ const Page = () => {
           ml={{ md: 6 }}
           allign="center"
         >
-            <Center>
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            maxWidth="100px"
-            display="inline-block"
-            borderRadius="full"
-            src="/images/ML_logo1.png"
-            alt="Profile Image"
-          />
+          <Center>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="100px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/ML_logo1.png"
+              alt="Profile Image"
+            />
           </Center>
         </Box>
-        
       </Box>
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -67,10 +68,21 @@ const Page = () => {
           <BioYear>2012</BioYear> Immigrated to NYC, USA.
         </BioSection>
         <BioSection>
-          <BioYear>2018</BioYear> Accepted into The Bronx High School of Science.
+          <BioYear>2018</BioYear>{' '}
+         
+            Accepted into  <a
+            href="https://en.wikipedia.org/wiki/Bronx_High_School_of_Science"
+            target="_blank"
+            rel="noreferrer noopener"
+          ><u>The Bronx High School of Science</u>.
+          </a>
         </BioSection>
         <BioSection>
-        <BioYear>2022 </BioYear>  <AddSuspenseComponent repeat={true}> T{''}B{''}D{''}.{' '}.{' '}.{' '}.{' '}.{' '}.{' '}.</AddSuspenseComponent>
+          <BioYear>2022 </BioYear>{' '}
+          <AddSuspenseComponent repeat={true}>
+            {' '}
+            T{''}B{''}D{''}. . . . . . .
+          </AddSuspenseComponent>
         </BioSection>
       </Section>
     </Container>
