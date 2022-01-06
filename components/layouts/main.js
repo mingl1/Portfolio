@@ -4,7 +4,7 @@ import NavBar from '../navbar'
 import dynamic from 'next/dynamic'
 import Loader from '../panda-loader'
 
-const LazyPanda = dynamic(() => import('../voxel-panda'), {
+export const LazyPanda = dynamic(() => import('../voxel-panda'), {
   ssr: false,
   loading: () => <Loader />
 })
@@ -28,7 +28,6 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        <LazyPanda />
         {children}
       </Container>
     </Box>

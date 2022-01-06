@@ -11,12 +11,13 @@ import { BioSection, BioYear } from '../components/bio'
 import AddSuspenseComponent from '../components/rand'
 import Age from '../components/age'
 import { LinkItem } from '../components/navbar'
-
+import { LazyPanda } from '../components/layouts/main'
 
 
 const Page = () => {
   return (
     <Container>
+      <LazyPanda/>
       <Box
         borderRadius="lg"
         bg={useColorModeValue('whiteAlpha.800', 'whiteAlpha.200')}
@@ -71,7 +72,7 @@ const Page = () => {
           <BioYear>2012</BioYear> Immigrated to NYC, USA.
         </BioSection>
         <BioSection>
-          <BioYear>2018</BioYear> Accepted into<LinkItem href="https://en.wikipedia.org/wiki/Bronx_High_School_of_Science"
+          <BioYear>2018</BioYear> Accepted into<LinkItem href="https://en.wikipedia.org/wiki/Bronx_High_School_of_Science" target="_blank" rel="noopener noreferrer"
             >The Bronx High School of Science.</LinkItem>
             
          
