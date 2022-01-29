@@ -27,7 +27,7 @@
     "react-icons": "^4.3.1",
     "react-random-reveal": "^1.0.1",
     "sharp": "^0.29.3",
-    "three": "^0.135.0",
+    "three": "^0.137.4",
     "uuid": "^7.0.3"
   },
   "devDependencies": {
