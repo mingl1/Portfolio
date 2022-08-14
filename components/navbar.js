@@ -84,15 +84,11 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/school" path={path} newTab={false}>
-            School Projects
-          </LinkItem>
-          <LinkItem href="/personal" path={path} newTab={false}>
-            Personal Projects
+          <LinkItem href="/school" path={path} newTab={true}>
+            My Projects
           </LinkItem>
           <LinkItem
-            href="https://github.com/mingl1/portfolio"
-            newTab={true}
+            href="https://github.com/mingl1/portfolio"            
 
             as={Link}
           >
