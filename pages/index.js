@@ -25,7 +25,7 @@ const Page = () => {
         mb={6}
         align="center"
       >
-        Hi, I&apos;m a <Age /> year old high school student in New York City!
+        Hi, I&apos;m an <Age /> Years Old Undergraduate in New York!
       </Box>
       {/* translate ming lin into different languages every 1.5 seconds */}
       <Box display={{ md: 'flex' }}>
@@ -35,8 +35,8 @@ const Page = () => {
           </Heading>
           <Section delay={0.1}>
             <Paragraph>
-              Senior student, attending <b>The Bronx High School of Science</b>{' '}
-              (2018-2022)
+              Currently a <b>Computer Science</b> Major at <b>Stony Brook University</b>{' '}
+              
             </Paragraph>
           </Section>
         </Box>
