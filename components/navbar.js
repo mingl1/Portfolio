@@ -21,20 +21,20 @@ export const LinkItem = ({ href, path, _target, children, ...props }) => {
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   const activeColor = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
 
-    return (
-      <NextLink href={href} passHref>
-        <Link
-          p={2}
-          _target={_target}
-          bg={active ? activeColor : undefined }
-          color={active ? '@202023' : inactiveColor}
-          borderRadius={"10px"}
-          {...props}
-        >
-          {children}
-        </Link>
-      </NextLink>
-    )
+  return (
+    <NextLink href={href} passHref>
+      <Link
+        p={2}
+        _target={_target}
+        bg={active ? activeColor : undefined}
+        color={active ? '@202023' : inactiveColor}
+        borderRadius={'10px'}
+        {...props}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  )
   //  else
   //   return (
   //     <NextLink href={href} passHref>
@@ -84,14 +84,10 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/school" path={path} newTab={true}>
+          <LinkItem href="/works" path={path} newTab={true}>
             My Projects
           </LinkItem>
-          <LinkItem
-            href="https://github.com/mingl1/portfolio"            
-
-            as={Link}
-          >
+          <LinkItem href="https://github.com/mingl1/portfolio" as={Link}>
             Source Code
           </LinkItem>
         </Stack>
