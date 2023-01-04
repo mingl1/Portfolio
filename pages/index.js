@@ -9,7 +9,6 @@ import {
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
-import AddSuspenseComponent from '../components/rand'
 import Age from '../components/age'
 //import { LinkItem } from '../components/navbar'
 import { LazyPanda } from '../components/layouts/main'
@@ -35,8 +34,8 @@ const Page = () => {
           </Heading>
           <Section delay={0.1}>
             <Paragraph>
-              Currently a <b>Computer Science</b> Major at <b>Stony Brook University</b>{' '}
-              
+              Currently a <b>Computer Science</b> Major at{' '}
+              <b>Stony Brook University</b>{' '}
             </Paragraph>
           </Section>
         </Box>
@@ -72,14 +71,11 @@ const Page = () => {
           <BioYear>2012</BioYear> Immigrated to NYC, USA.
         </BioSection>
         <BioSection>
-          <BioYear>2018</BioYear>
-          {' '}The Bronx High School of Science.
+          <BioYear>2018</BioYear> The Bronx High School of Science.
         </BioSection>
         <BioSection>
-          <BioYear>2022 </BioYear>
-          <AddSuspenseComponent repeat={true}>
-            Stony Brook University.
-          </AddSuspenseComponent>
+          <BioYear>2022</BioYear>
+          Stony Brook University.
         </BioSection>
       </Section>
     </Container>
