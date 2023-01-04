@@ -1,16 +1,16 @@
 import {
   Container,
   Heading,
-  SimpleGrid,
+  // SimpleGrid,
   Divider,
-  Box,
+  // Box,
   OrderedList,
   ListItem,
   Link
 } from '@chakra-ui/react'
-import { LazyPanda } from '../components/layouts/main'
+// import { LazyPanda } from '../components/layouts/main'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { LinkItem } from '../components/navbar'
+// import { LinkItem } from '../components/navbar'
 // import Section from "../components/section"
 
 const Works = () => {
