@@ -13,10 +13,10 @@ const VoxelPanda = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [target] = useState(new THREE.Vector3(-0.5, 0, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      100 * Math.sin(0.2 * Math.PI),
+      60 * Math.sin(0.2 * Math.PI),
       0.1,
       0.1 * Math.cos(0.2 * Math.PI)
     )
@@ -51,10 +51,10 @@ const VoxelPanda = () => {
 
       const scale = scH * 0.005 + 4.8
       const camera = new THREE.OrthographicCamera(
-        -scale/1.5,
-        scale/1.5,
-        scale/1.5,
-        -scale/1.5,
+        -scale / 1.5,
+        scale / 1.5,
+        scale / 1.5,
+        -scale / 1.5,
         2,
         100
       )
@@ -107,7 +107,7 @@ const VoxelPanda = () => {
       }
     }
   }, [])
-  
+
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize, false)
     return () => {
@@ -116,7 +116,9 @@ const VoxelPanda = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <PandaContainer ref={refContainer}>{loading && <PandaSpinner />}</PandaContainer>
+    <PandaContainer ref={refContainer}>
+      {loading && <PandaSpinner />}
+    </PandaContainer>
   )
 }
 

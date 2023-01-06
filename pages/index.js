@@ -11,12 +11,12 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Age from '../components/age'
 //import { LinkItem } from '../components/navbar'
-import { LazyPanda } from '../components/layouts/main'
+// import { LazyPanda } from '../components/layouts/main'
 
 const Page = () => {
   return (
     <Container>
-      <LazyPanda />
+      {/* <LazyPanda /> */}
       <Box
         borderRadius="lg"
         bg={useColorModeValue('whiteAlpha.800', 'whiteAlpha.200')}
