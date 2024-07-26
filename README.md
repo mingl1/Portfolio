@@ -1,3 +1,3 @@
 # Portfolio
-Deployed with AWS serverless on minglin.me
+insculp.me
 Heavily inspired by Craftz.dog
